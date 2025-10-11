@@ -5,38 +5,62 @@ public class Main {
     public static void main(String[] args) {
         // Votre code doit être APRES de ce commentaire
         // input date
-        System.out.println("Entrez le jour : ");
+        System.out.println("Quelle est la date ? Jour, puis mois, puis année : ");
         int day = readNextInt();
-        System.out.println("Entrez le mois : ");
         int month = readNextInt();
-        System.out.println("Entrez l'année entre 1900 et 2400 : ");
         int year = readNextInt();
         
-        // calculer la date du lendemain
-        if(day == 31){
-            day = 1;
-        } else {
-            day++;
+        // ajouter un jour
+        day++;
+        
+        // gérer les débordements
+        switch(mois){
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                if(day > 31){
+                    month++;
+                    day = 1;
+                }
+                break;
+            case 4: 
+            case 6: 
+            case 9: 
+            case 11:
+                if(day > 30){
+                    month++;
+                    day = 1;
+                }
+                break;
+            case 2:
+                if(year % 4 == 0 && year % 100 == 0 && year % 400 ==0){
+                    if(day > 29){
+                      month++;
+                      day = 1;  
+                    }    
+                }else if (day > 28){
+                      month++;
+                      day = 1;  
+                }
             }
-                
-        if(month == 12){
+            break;
+        }
+        if(month > 12) {
             month = 1;
-        }else {
-            month++;
+            year++;
         }
-        
-        if(year % 4 == 0 && year % 100 == 0 && year % 400 == 0){
-            if(month == 2 && day == 28){
-                
-            }
+         // afficher le résultat
+        System.out.println("Le jour suivant est le : " + day + "/" + month + "/" + year);
         }
-        
-          // afficher date du lendemain
-    }
-    
+     
+}}  
     
      // Votre code doit être AVANT de ce commentaire
-}
+
 
      
     /*
