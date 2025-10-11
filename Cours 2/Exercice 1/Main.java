@@ -11,17 +11,17 @@ public class Main {
         // 2. vérifier que la note est valide
         // 3. afficher le grade approprié
         if((note >= 0) && (note <= 20)){
-            if((note >= 0 ) && (note < 10)){
+            if(note < 10){
                 System.out.println("Aucun");
-            } else if((note >= 10 ) && (note < 12)){
+            } else if(note < 12){
                 System.out.println("Réussi.");
-            }else if((note >= 12 ) && (note < 14)){
+            }else if(note < 14){
                 System.out.println("Satisfaction.");
-            }else if((note >= 14 ) && (note < 16)){
+            }else if(note < 16){
                 System.out.println("Distinction.");
-            }else if((note >= 16 ) && (note < 18)){
+            }else if(note < 18){
                 System.out.println("Grande distinction.");
-            }else if((note >= 18 )){
+            }else{
                 System.out.println("La plus grande distinction.");
             }
         }else {
