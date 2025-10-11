@@ -4,34 +4,41 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         // Votre code doit être APRES de ce commentaire
-        //1) Input rayon
-        System.out.println("Veuillez entrer une valeur pour le rayon : ");
-        double r = readNextDouble();
-        //2) Input pour le calcul à faire
-        System.out.println("Tapez 'p/P' pour calculer le périmètre ou 'a/A' pour calculer l'aire du cercle : ");
-        char req = readNextChar();
+        // input date
+        System.out.println("Entrez le jour : ");
+        int day = readNextInt();
+        System.out.println("Entrez le mois : ");
+        int month = readNextInt();
+        System.out.println("Entrez l'année entre 1900 et 2400 : ");
+        int year = readNextInt();
         
-        //- declarer pi
-        final double pi = 3.14;
-        
-        //3) switch case P ou A
-        //4) Output
-        switch(req){
-            case 'p':
-            case 'P':
-                System.out.println("Périmètre : " + (2 * pi * r) + "."); 
-                break;
-            case 'a':
-            case 'A':
-                System.out.println("Aire : " + (pi * r * r) + "."); 
-                break;
-            default:
-                break;
+        // calculer la date du lendemain
+        if(day == 31){
+            day = 1;
+        } else {
+            day++;
+            }
+                
+        if(month == 12){
+            month = 1;
+        }else {
+            month++;
         }
-    
-        // Votre code doit être AVANT de ce commentaire
+        
+        if(year % 4 == 0 && year % 100 == 0 && year % 400 == 0){
+            if(month == 2 && day == 28){
+                
+            }
+        }
+        
+          // afficher date du lendemain
     }
     
+    
+     // Votre code doit être AVANT de ce commentaire
+}
+
+     
     /*
      * Aides mises à votre dispositons:
      * readNextInt()    : lis le nombre entier entré par l'utilisateur et retourne sa valeur
