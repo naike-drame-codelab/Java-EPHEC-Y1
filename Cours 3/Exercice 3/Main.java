@@ -7,28 +7,32 @@ public class Main {
         // demander un caractère minuscule comme input
         System.out.println("Veuillez entrer une lettre minuscule : ");
         char c = readNextChar();
-        
+
+        boolean lowercase = c >= 'a' && c <= 'z';
+        boolean uppercase = c >= 'A' && c <= 'Z';
+        boolean vowel = c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' || c == 'y';
+
         // vérifier que ce n'est pas un symbole
-            // vérifier que c'est bien une minuscule
-            if(c >= 'a' && c <= 'z'){
-                // si la lettre est une voyelle
-                if(c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' || c == 'y'){
-                    // afficher que la lettre entrée est une voyelle
-                    System.out.println("La lettre " + c + " est une voyelle.");
+        // vérifier que c'est bien une minuscule
+        if(lowercase){
+            // si la lettre est une voyelle
+            if(vowel){
+                // afficher que la lettre entrée est une voyelle
+                System.out.println("La lettre " + c + " est une voyelle.");
                 // sinon
-                } else {
-                    // afficher que c'est une consonne
-                    System.out.println("La lettre " + c + " est une consonne.");
-                }             
-            } else if (c >= 'A' && c <= 'Z'){
-                // afficher que ce n'est pas une minuscule
-                System.out.println("La lettre doit être une minuscule !");
             } else {
-                System.out.println("L'entrée ne doit pas être un symbole !!!");
-            }              
+                // afficher que c'est une consonne
+                System.out.println("La lettre " + c + " est une consonne.");
+            }             
+        } else if (uppercase){
+            // afficher que ce n'est pas une minuscule
+            System.out.println("La lettre doit être une minuscule !");
+        } else {
+            System.out.println("L'entrée ne doit pas être un symbole !!!");
+        }              
         // Votre code doit être AVANT de ce commentaire
     }
-    
+
     /*
      * Aides mises à votre dispositons:
      * readNextInt()    : lis le nombre entier entré par l'utilisateur et retourne sa valeur
@@ -44,7 +48,7 @@ public class Main {
     // signifie que vous avez fait une erreur d'accolades; ce ne
     // signifie PAS qu'il y a une erreur dans le code ci dessous
     // (cfr slides cours 2)
-    
+
     /***
      * Cette fonction lis et retourne le prochain int entré par l'utilisateur
      */
@@ -68,7 +72,7 @@ public class Main {
         } while (!valid);
         return res;
     }
-    
+
     /***
      * Cette fonction lis et retourne le prochain double entré par l'utilisateur
      */
@@ -90,7 +94,7 @@ public class Main {
         } while (Double.isNaN(res));
         return res;
     }
-    
+
     /***
      * Cette fonction lis et retourne le prochain char entré par l'utilisateur
      */
@@ -98,7 +102,7 @@ public class Main {
         char res = s.next(".").charAt(0);
         return res;
     }
-    
+
     /***
      * Cette fonction lis et retourne la ligne entrée par l'utilisateur
      */
