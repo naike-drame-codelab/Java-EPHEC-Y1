@@ -8,22 +8,24 @@ public class Main {
         System.out.println("Veuillez entrer une lettre minuscule : ");
         char c = readNextChar();
         
-        // vérifier que c'est bien une minuscule
-        if(c >= 'a' && c <= 'z'){
-            // si la lettre est une voyelle
-            if(c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' || c == 'y'){
-                // afficher que la lettre entrée est une voyelle
-                System.out.println("La lettre " + c + " est une voyelle.");
-            // sinon
+        // vérifier que ce n'est pas un symbole
+            // vérifier que c'est bien une minuscule
+            if(c >= 'a' && c <= 'z'){
+                // si la lettre est une voyelle
+                if(c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' || c == 'y'){
+                    // afficher que la lettre entrée est une voyelle
+                    System.out.println("La lettre " + c + " est une voyelle.");
+                // sinon
+                } else {
+                    // afficher que c'est une consonne
+                    System.out.println("La lettre " + c + " est une consonne.");
+                }             
+            } else if (c >= 'A' && c <= 'Z'){
+                // afficher que ce n'est pas une minuscule
+                System.out.println("La lettre doit être une minuscule !");
             } else {
-                // afficher que c'est une consonne
-                System.out.println("La lettre " + c + " est une consonne.");
-            }             
-        } else {
-            // afficher que ce n'est pas une minuscule
-            System.out.println("La lettre doit être une minuscule !");
-        }
-                        
+                System.out.println("L'entrée ne doit pas être un symbole !!!");
+            }              
         // Votre code doit être AVANT de ce commentaire
     }
     
