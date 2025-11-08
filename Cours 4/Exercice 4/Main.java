@@ -4,44 +4,19 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         // Votre code doit être APRES de ce commentaire
-        System.out.print("Entrez un premier nombre : ");
-        int a = readNextInt();
-        System.out.print("Entrez un second nombre : ");
-        int b = readNextInt();
-        System.out.print("Entrez un nombre pour le saut : ");
-        int step = readNextInt();
+        System.out.print("Entrez un chiffre : ");
+        int x = readNextInt();
 
-        // en partant du 1er chiffre, afficher tous les incréments jusqu'au 2e
-        int current = a;
+        //multiplier 1 par tous les nombres entre 1 et le nombre
+        long result = 1;
+        int multiplier = 1;
 
-        if(step > 0){
-            // ici on va vers le haut
-            if(b < a){
-                System.out.println("Impossible d'aller vers le bas avec un incrément positif.");
-            } else {
-                while(current <= b){
-                    System.out.println(current);
-                    current += step;
-                }
-            } 
-        }else if(step < 0) {
-            // ici on va vers le bas
-            if(a < b){
-                System.out.println("Impossible d'aller vers le haut avec un incrément négatif.");
-            } else {
-                while(current >= b){
-                    System.out.println(current);
-                    current += step;
-                }
-            }
-        }
-        else {
-            // ici on reste sur place quand step == 0
-            System.out.println("Ce n'est pas possible de faire un incrément de 0.");
+        while(multiplier <= x){
+            result *= multiplier;
+            multiplier++;
         }
 
-        
-       
+        System.out.print("La factorielle vaut " + result + ".");
         // Votre code doit être AVANT de ce commentaire
     }
 
