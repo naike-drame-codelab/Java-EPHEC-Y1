@@ -4,6 +4,20 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         // Votre code doit être APRES de ce commentaire
+        int base, exponent;
+        
+        System.out.print("Veuillez entrer un nombre : ");
+        base = readNextInt();
+        System.out.print("Veuillez entrer un nombre pour la puissance : ");
+        exponent = readNextInt();
+        
+        long result = 1;
+        
+        for(int i = 0; i < exponent; i++){
+           result *= base;
+        }
+        
+        System.out.println(base + " exposant " + exponent + " est égal à : " + result);        
         
         // Votre code doit être AVANT de ce commentaire
     }

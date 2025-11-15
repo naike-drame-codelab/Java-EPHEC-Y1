@@ -4,6 +4,16 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         // Votre code doit être APRES de ce commentaire
+        System.out.print("Entrez un nombre : ");
+        int a = readNextInt();
+        int sum = 0
+        if(a > 0){
+            for(int i = 0; i <= a; i++){
+                
+            }
+        } else {
+            for(int i = 0; i >= a; i--){}
+        }
         
         // Votre code doit être AVANT de ce commentaire
     }

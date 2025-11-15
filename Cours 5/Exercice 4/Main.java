@@ -4,6 +4,23 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         // Votre code doit être APRES de ce commentaire
+        int nb = 0;
+        int cube = 0; 
+        int sum = 0;
+        boolean isFirstLoop = true;
+        
+        do{
+            System.out.print("Veuillez entrer un nombre : ");
+            nb = readNextInt();
+            if(isFirstLoop){
+                cube = nb * nb * nb;
+                isFirstLoop = false;
+            }
+            
+            sum += nb;
+        }while(nb < cube);
+        
+        System.out.println("La différence entre la somme totale (" + sum + ") et le dernier nombre entré est de : " + (sum - nb));
         
         // Votre code doit être AVANT de ce commentaire
     }
