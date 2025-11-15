@@ -4,22 +4,28 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         // Votre code doit être APRES de ce commentaire
+        
+        // déclaration de variables
         int input, greaterNumber;
         
+        // demander le 1er nombre
         System.out.print("Entrez un nombre : ");
         input = readNextInt();
-        
+        // memoriser le 1er nb
         greaterNumber = input;
         
+        // demander le nombre suivant       
         for(int i = 2; i <= 10; i++){
             System.out.print("Entrée n°" + i + ". Veuillez entrer un nouveau nombre : ");
             input = readNextInt();
+            // si le i nb est plus grand que le greaterNumber, remplacer
             if(input > greaterNumber){
                 greaterNumber = input;
             }
         }
         
-        System.out.println("10 chiffres ont été entrés. Le plus grand est : " + greaterNumber);
+        // afficher le nombre final
+        System.out.println("10 nombres ont été entrés. Le plus grand est : " + greaterNumber);
         
         // Votre code doit être AVANT de ce commentaire
     }

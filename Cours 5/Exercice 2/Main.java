@@ -4,6 +4,50 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         // Votre code doit être APRES de ce commentaire
+        int input; 
+        int sum = 0;
+        double average;
+        final int MAX= 5;
+        
+        System.out.println("Veuillez entrer 5 nombre entiers positifs : ");
+        
+        // --------- WHILE --------
+        // int i = 1;
+        // while(i <= MAX){
+            // System.out.print("Nombre n° " + i + " : ");
+            // input = readNextInt();
+            
+            // if(input > 0){
+                // sum += input;
+                // i++;
+            // }else{
+                // System.out.print("Erreur. Veuillez entrer un nombre strictement positif : ");
+            // }
+        // }
+        
+        // FOR
+        for(int j = 1; j <= MAX; j++){
+            boolean isValid = false;
+            
+            while(!isValid){
+                System.out.print("Nombre n° " + j + " : ");
+                input = readNextInt();
+                
+                if(input > 0){
+                    isValid = true;
+                    sum += input;
+                }else{
+                    System.out.print("Erreur. Veuillez entrer un nombre strictement positif : ");
+                }
+            }
+            
+        }
+        
+        average = (double) sum / MAX;
+        System.out.println("La moyenne des nombres est de : " + average);
+        System.out.println("La somme totale des nombres est de : " + sum);
+        
+        
         
         // Votre code doit être AVANT de ce commentaire
     }
