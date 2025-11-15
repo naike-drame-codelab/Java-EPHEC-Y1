@@ -4,6 +4,22 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         // Votre code doit être APRES de ce commentaire
+        int input, greaterNumber;
+        
+        System.out.print("Entrez un nombre : ");
+        input = readNextInt();
+        
+        greaterNumber = input;
+        
+        for(int i = 2; i <= 10; i++){
+            System.out.print("Entrée n°" + i + ". Veuillez entrer un nouveau nombre : ");
+            input = readNextInt();
+            if(input > greaterNumber){
+                greaterNumber = input;
+            }
+        }
+        
+        System.out.println("10 chiffres ont été entrés. Le plus grand est : " + greaterNumber);
         
         // Votre code doit être AVANT de ce commentaire
     }
