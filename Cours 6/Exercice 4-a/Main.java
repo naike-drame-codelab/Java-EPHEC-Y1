@@ -7,30 +7,66 @@ public class Main {
         // demander à l'utilisateur 10 nombres
         System.out.println("Veuillez entrer 10 nombres.");
         //initialiser un tableau de taille 10
+        // tableau de test
+        //int[] arr = new int[] {12, -24, 1, 9, -56, -3, 31, 11, 63, 4};
         int[] arr = new int[10];
 
+        // remplir le tableau
         for(int i = 0; i < arr.length; i++){
             // demander le nombre i
-                // afficher la demande
-             System.out.print("Nombre " + (i+1) + ": ");
-                // mémoriser le nombre entré
-             arr[i] = readNextInt();
+            // afficher la demande
+            System.out.print("Nombre " + (i+1) + ": ");
+            // mémoriser le nombre entré
+            arr[i] = readNextInt();
         }
-        
-        // trier le tableau
-        
-        
+        // afficher le tableau non trié
+        System.out.println("Tableau non trié : ");
+        for(int j = 0; j < arr.length; j++){
+            System.out.print(arr[j] + " ");
+        }
+
+        // tri à bulles
+        // boucle simple avec arr.length -1 pour éviter OutofBoundException
+        boolean isInverted = true;
+            // repeter tant qu'une inversion a été faite durant un parcours de tableau
+        while(isInverted){
+            // parcourir tout le tableau
+            isInverted = false;
+            
+            for(int i = 0; i < arr.length - 1; i++){
+                // comparaison et swap des 2 si nécessaire
+                if(arr[i] > arr[i+1]){
+                    int tmp = arr[i];
+                    arr[i] = arr[i+1];
+                    arr[i+1] = tmp;
+                    isInverted = true;
+                }
+            }
+        }
+
+        // alternative avec double boucle
+        for(int i = 0; i < arr.length; i++){
+            for(int j = i+1; j < arr.length; j++){     
+                // comparaison et swap des 2 si nécessaire
+                if(arr[i] > arr[j]){
+                    int tmp = 0;
+                    tmp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = tmp;
+                }
+            }
+        }
+
         // afficher le tableau trié
         System.out.println("Tableau trié : ");
 
         for(int j = 0; j < arr.length; j++){
             System.out.print(arr[j] + " ");
         }
-        
-        
+
         // Votre code doit être AVANT de ce commentaire
     }
-    
+
     /*
      * Aides mises à votre dispositons:
      * readNextInt()    : lis le nombre entier entré par l'utilisateur et retourne sa valeur
@@ -46,7 +82,7 @@ public class Main {
     // signifie que vous avez fait une erreur d'accolades; ce ne
     // signifie PAS qu'il y a une erreur dans le code ci dessous
     // (cfr slides cours 2)
-    
+
     /***
      * Cette fonction lis et retourne le prochain int entré par l'utilisateur
      */
@@ -70,7 +106,7 @@ public class Main {
         } while (!valid);
         return res;
     }
-    
+
     /***
      * Cette fonction lis et retourne le prochain double entré par l'utilisateur
      */
@@ -92,7 +128,7 @@ public class Main {
         } while (Double.isNaN(res));
         return res;
     }
-    
+
     /***
      * Cette fonction lis et retourne le prochain char entré par l'utilisateur
      */
@@ -100,7 +136,7 @@ public class Main {
         char res = s.next(".").charAt(0);
         return res;
     }
-    
+
     /***
      * Cette fonction lis et retourne la ligne entrée par l'utilisateur
      */

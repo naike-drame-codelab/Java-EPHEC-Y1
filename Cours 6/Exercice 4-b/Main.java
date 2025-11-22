@@ -4,7 +4,41 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         // Votre code doit être APRES de ce commentaire
+        // demander à l'utilisateur 10 nombres
+        System.out.println("Veuillez entrer 10 nombres.");
+        //initialiser un tableau de taille 10
+        //int[] arr = new int[10];
+        int[] arr = new int[] {12, 24, 1, 9, 56, 3, 31, 11, 63, 4};
+        // remplir le tableau
+           /* for(int i = 0; i < arr.length; i++){
+            // demander le nombre i
+                // afficher la demande
+             System.out.print("Nombre " + (i+1) + ": ");
+                // mémoriser le nombre entré
+             arr[i] = readNextInt();
+        }
+        */
+        // tri par sélection
+        for(int i = 0; i < arr.length; i++){
+            for(int j = i+1; j < arr.length; j++){
+                
+                
+                // comparaison et swap des 2
+                if(arr[i] > arr[j]){
+                    int tmp = 0;
+                    tmp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = tmp;
+                }
+            }
+        }
         
+        // afficher le tableau trié
+        System.out.println("Tableau trié : ");
+
+        for(int j = 0; j < arr.length; j++){
+            System.out.print(arr[j] + " ");
+        }
         // Votre code doit être AVANT de ce commentaire
     }
     
