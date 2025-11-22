@@ -4,6 +4,29 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         // Votre code doit être APRES de ce commentaire
+        // demander à l'utilisateur 10 nombres
+        System.out.println("Veuillez entrer 10 nombres.");
+        //initialiser un tableau de taille 10
+        int[] arr = new int[10];
+
+        for(int i = 0; i < arr.length; i++){
+            // demander le nombre i
+                // afficher la demande
+             System.out.print("Nombre " + (i+1) + ": ");
+                // mémoriser le nombre entré
+             arr[i] = readNextInt();
+        }
+        
+        // trier le tableau
+        
+        
+        // afficher le tableau trié
+        System.out.println("Tableau trié : ");
+
+        for(int j = 0; j < arr.length; j++){
+            System.out.print(arr[j] + " ");
+        }
+        
         
         // Votre code doit être AVANT de ce commentaire
     }

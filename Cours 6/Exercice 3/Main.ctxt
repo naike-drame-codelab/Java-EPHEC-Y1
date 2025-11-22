@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Main
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=
+comment2.target=int\ readNextInt()
+comment2.text=\r\n\ Cette\ fonction\ lis\ et\ retourne\ le\ prochain\ int\ entr\u00E9\ par\ l'utilisateur\r\n
+comment3.params=
+comment3.target=double\ readNextDouble()
+comment3.text=\r\n\ Cette\ fonction\ lis\ et\ retourne\ le\ prochain\ double\ entr\u00E9\ par\ l'utilisateur\r\n
+comment4.params=
+comment4.target=char\ readNextChar()
+comment4.text=\r\n\ Cette\ fonction\ lis\ et\ retourne\ le\ prochain\ char\ entr\u00E9\ par\ l'utilisateur\r\n
+comment5.params=
+comment5.target=java.lang.String\ readNextString()
+comment5.text=\r\n\ Cette\ fonction\ lis\ et\ retourne\ la\ ligne\ entr\u00E9e\ par\ l'utilisateur\r\n
+numComments=6

@@ -5,6 +5,23 @@ public class Main {
     public static void main(String[] args) {
         // Votre code doit être APRES de ce commentaire
         
+        // demander la taille du tableau
+        System.out.println("Veuillez entrer une taille de tableau : ");
+        // creer le tableau
+        int[] arr = new int[readNextInt()];
+        long sum = 0;
+        // remplir le tableau avec les indices
+        for(int i = 0; i < arr.length; i++){
+            arr[i] = i;
+            // System.out.println(arr[i]);
+            
+            if(arr[i] % 2 == 0){
+               sum += i; 
+            }
+        }
+        // afficher la somme des nombres dans les index pairs
+        System.out.println("La somme des nombres situés dans les index pairs vaut : " + sum + ".");
+        
         // Votre code doit être AVANT de ce commentaire
     }
     

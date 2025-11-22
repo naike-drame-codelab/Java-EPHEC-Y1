@@ -5,6 +5,28 @@ public class Main {
     public static void main(String[] args) {
         // Votre code doit être APRES de ce commentaire
         
+        // demander 10 nombres
+        System.out.println("--- Veuillez entrez 10 nombres ---");
+
+        final int size = 10;
+        int[] arr = new int[size];
+        
+        for(int i = 0; i < arr.length; i++){
+            // demander le nombre i
+                // afficher la demande
+             System.out.print("Nombre " + (i+1) + ": ");
+                // mémoriser le nombre entré
+             arr[i] = readNextInt();
+            
+        }
+        
+        // afficher le tableau inversé
+        System.out.println("Tableau inversé :");
+        for(int i = arr.length - 1; i >= 0; i--){
+            System.out.print(arr[i] + ", ");
+        }
+    
+        System.out.println(); // retour à la ligne final
         // Votre code doit être AVANT de ce commentaire
     }
     

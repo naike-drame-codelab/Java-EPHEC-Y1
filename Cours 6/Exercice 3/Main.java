@@ -5,6 +5,33 @@ public class Main {
     public static void main(String[] args) {
         // Votre code doit être APRES de ce commentaire
         
+        // créer un tableau de la taille demandée
+        System.out.println("Veuillez entrer une taille de tableau : ");
+        int[] fibonacci = new int[readNextInt()];
+        
+        // demander à l'utilisateur 2 nombres de départ
+        System.out.print("Entrez le 1er nombre de la suite : ");
+        fibonacci[0] = readNextInt();
+        System.out.print("Entrez le 2e nombre de la suite : ");
+        fibonacci[1] = readNextInt();
+        
+        System.out.println("Suite de Fibonacci : ");
+        
+        // calculer et ajouter les nombres de la suite de fibonacci
+        for(int i = 2; i < fibonacci.length; i++)
+        {
+            // F(n) = F(n-1) + F(n-2)
+            fibonacci[i] = fibonacci[i-1] + fibonacci[i-2];
+        }
+        
+        // afficher le tableau
+        for(int j = 0; j < fibonacci.length; j++){
+            System.out.print(fibonacci[j] + " ");
+        }
+        
+        System.out.println();
+        
+        
         // Votre code doit être AVANT de ce commentaire
     }
     
